@@ -20,9 +20,10 @@ loaderbtn3.addEventListener('click', () => {
 })
 
 const getStyle = async () => {
-    let style = localStorage.getItem('style');
+    let style = await localStorage.getItem('style');
     if (!style) {
         localStorage.setItem('style', 'loader1');
+        style = await 'loader1'
     }
     return style
 }
